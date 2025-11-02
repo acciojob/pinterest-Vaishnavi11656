@@ -1,1 +1,91 @@
-/*  your css code here. If applicable */
+/*  your css code here. If applicable *
+/* --- Basic Reset & Body --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Using a serif font to match the image */
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+/* Ensures padding and borders are included in the 
+  total width/height of elements.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* --- Hero Container --- */
+.hero {
+    /* Required properties */
+    display: flex;
+    align-items: stretch; /* Makes both columns full height */
+    justify-content: flex-start; /* Aligns columns to the start */
+    
+    /* Full-screen hero section */
+    width: 100%;
+    height: 100vh; /* vh = viewport height */
+    overflow: hidden; /* Prevents any content from spilling out */
+}
+
+/* --- Left Column: Image Container --- */
+.hero-image-container {
+    flex: 2; /* Gives this column 2/3 of the space */
+    height: 100vh;
+}
+
+/* --- Image Styling --- */
+.hero-image-container img {
+    /* Required properties */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Clips the image to fit, as requested */
+}
+
+/* --- Right Column: Content Box --- */
+.hero-content {
+    flex: 1; /* Gives this column 1/3 of the space */
+    background-color: #ffffff;
+    
+    /* Using flexbox to center the content inside the box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 40px;
+    text-align: center;
+}
+
+/* --- Text Element Styling --- */
+.hero-content h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 300px; /* Keeps the text from getting too wide */
+}
+
+/* --- "Explore now" Button Styling --- */
+.explore-button {
+    /* Required properties */
+    padding: 12px 24px;
+    background-color: #e60023; /* A red color similar to Pinterest's */
+    color: white;
+    border-radius: 25px; /* Creates the pill shape */
+
+    /* Additional styling for a clean look */
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Buttons often look better with sans-serif */
+}
+
+.explore-button:hover {
+    background-color: #ad001a; /* Darker red on hover */
+}
